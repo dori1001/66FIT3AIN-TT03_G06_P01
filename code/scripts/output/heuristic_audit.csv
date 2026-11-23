@@ -1,0 +1,21 @@
+Regime,Mode,Heuristic,Weight,Multiplier,Adm_Pass,Adm_Total,Adm_Pass_Pct,Cons_Pass,Cons_Total,Cons_Pass_Pct
+Unconstrained (S1/S4),Scaled,Euclidean,distance,0.999017,2916,2916,100.0,8100,8100,100.0
+Unconstrained (S1/S4),Scaled,Euclidean,travel_time,0.713776,2916,2916,100.0,8100,8100,100.0
+Unconstrained (S1/S4),Scaled,Manhattan,distance,0.706412,2916,2916,100.0,8100,8100,100.0
+Unconstrained (S1/S4),Scaled,Manhattan,travel_time,0.504716,2916,2916,100.0,8100,8100,100.0
+Unconstrained (S1/S4),Raw,Euclidean,distance,1.0,2872,2916,98.49,8025,8100,99.07
+Unconstrained (S1/S4),Raw,Euclidean,travel_time,1.0,1028,2916,35.25,6413,8100,79.17
+Unconstrained (S1/S4),Raw,Manhattan,distance,1.0,1308,2916,44.86,6783,8100,83.74
+Unconstrained (S1/S4),Raw,Manhattan,travel_time,1.0,478,2916,16.39,5482,8100,67.68
+Blocked Edge (S2),Scaled,Euclidean,distance,0.999017,2916,2916,100.0,7992,7992,100.0
+Blocked Edge (S2),Scaled,Euclidean,travel_time,0.713776,2916,2916,100.0,7992,7992,100.0
+Blocked Edge (S2),Scaled,Manhattan,distance,0.706412,2916,2916,100.0,7992,7992,100.0
+Blocked Edge (S2),Scaled,Manhattan,travel_time,0.504716,2916,2916,100.0,7992,7992,100.0
+Accessible Only (S3/S5),Scaled,Euclidean,distance,0.999017,2916,2916,100.0,7668,7668,100.0
+Accessible Only (S3/S5),Scaled,Euclidean,travel_time,0.713776,2916,2916,100.0,7668,7668,100.0
+Accessible Only (S3/S5),Scaled,Manhattan,distance,0.706412,2916,2916,100.0,7668,7668,100.0
+Accessible Only (S3/S5),Scaled,Manhattan,travel_time,0.504716,2916,2916,100.0,7668,7668,100.0
+Blocked + Accessible,Scaled,Euclidean,distance,0.999017,2916,2916,100.0,7560,7560,100.0
+Blocked + Accessible,Scaled,Euclidean,travel_time,0.713776,2916,2916,100.0,7560,7560,100.0
+Blocked + Accessible,Scaled,Manhattan,distance,0.706412,2916,2916,100.0,7560,7560,100.0
+Blocked + Accessible,Scaled,Manhattan,travel_time,0.504716,2916,2916,100.0,7560,7560,100.0
