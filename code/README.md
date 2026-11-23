@@ -1,69 +1,107 @@
 # Smart Campus Route Planner — Hanoi University (HANU)
 
-**Project 01 (P01)** — Artificial Intelligence Final Product (`66FIT3AIN-TT03_G06_P01`).
+**Project 01 (P01) — Artificial Intelligence Final Product**
 
-A fully offline AI campus wayfinding application implementing Breadth-First Search (BFS), Greedy Best-First Search (GBFS), and Optimal A* Search with cached admissible/consistent heuristic scaling from scratch in Python.
+**Class:** 66FIT3AIN-TT03  
+**Group:** G06
 
-## 1. Environment & Installation
+A fully offline AI-powered campus wayfinding application developed for Hanoi University (HANU).
 
-- **Python version:** Python 3.11+ (tested on Python 3.11 and 3.12)
-- **Offline execution:** Runs 100% locally with zero external API or LLM calls.
+The application implements three search algorithms:
+
+- Breadth-First Search (BFS)
+- Greedy Best-First Search (GBFS)
+- A* Search
+
+## 1. Requirements
+
+- Python 3.11 or higher
+- pip
+- Required Python packages listed in `requirements.txt`
+
+## 2. Installation
+
+**Step 1.** Open a terminal and navigate to the `code` directory:
 
 ```bash
-python3.11 -m venv .venv
-# Linux / macOS:
-source .venv/bin/activate
-# Windows (PowerShell):
-# .\.venv\Scripts\Activate.ps1
+cd code
+```
 
+**Step 2.** Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+**Step 3.** Activate the virtual environment.
+
+Windows (Command Prompt):
+
+```cmd
+.venv\Scripts\activate
+```
+
+Windows (PowerShell):
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Linux / macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+**Step 4.** Install the required dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## 2. One-Command Application Launch
+## 3. Run the Application
+
+After completing the installation, make sure your terminal is in the `code` directory and the virtual environment is activated.
+
+Run the application using this single command:
 
 ```bash
 streamlit run starter/app.py
 ```
 
-The Streamlit web application provides:
-- **1-Click Standard Scenarios (S1–S5)** from `data/scenarios.json` and **1-Click Stress Scenarios (S6–S8)** (multi-corridor outage, combined maintenance + wheelchair accessibility, complete destination isolation).
-- **Side-by-Side Dual-Map Comparison** allowing independent selection of Route A vs. Route B with real-time delta metrics.
-- **Dynamic Maintenance Simulator** (`blocked_edges` multiselect) and **Accessible-Only Mode** (`accessible_only`).
-- **Turn-by-Turn Directions** and **Live Execution Log Breakdown** (`Nodes Expanded`, `Generated Nodes`, `Edge Checks`, `Duplicates`, `Cycle Rejections`, `Re-expansions`).
+Streamlit will start the application and provide a local URL in the terminal. Open that URL in your web browser to use the Campus Route Planner.
 
-## 3. Reproducing All Report Tables and Figures
+## 4. Main Features
 
-Run the deterministic benchmark and figure generation script:
+- Campus route planning using BFS, GBFS, and A*.
+- Standard and stress-test scenarios.
+- Side-by-side route comparison.
+- Dynamic route blocking to simulate campus maintenance.
+- Accessible-only navigation mode.
+- Turn-by-turn route directions.
+- Search performance and execution metrics.
 
-```bash
-python scripts/run_experiments.py --seed 42
-```
-
-This command reproduces:
-- `scripts/output/heuristic_audit.csv` — Exhaustive Admissibility (2,916 node pairs) and Consistency (8,100 / 7,992 / 7,668 / 7,560 directed edge-goal checks across 4 constraint regimes).
-- `scripts/output/final_benchmark_results.csv` — Baseline (BFS, GBFS), Midterm Uncached A*, and Final Cached A* metrics across S1–S8 (`Mean ± Std` over $N=200$ runs, plus execution log counters).
-- `scripts/output/fig1_architecture.png` through `fig6_route_overlays.png` — All figures embedded in the Final Report.
-
-## 4. Automated Test Suite
-
-```bash
-pytest tests/ -v
-```
-
-Includes `tests/test_project_01_sanity.py` (12 data integrity, SHA-256, schema, and functional tests), `tests/test_stress_scenarios.py` (5 stress, boundary, caching, and 2,916 all-pairs Dijkstra ground-truth optimality tests), and `tests/test_app_smoke.py` (2 end-to-end headless Streamlit UI smoke tests covering all presets S1–S8, dual-map rendering, and start==goal edge cases — **19 tests total**).
-
-## 5. Repository Structure
+## 5. Project Structure
 
 ```text
 code/
 ├── README.md
 ├── requirements.txt
-├── data/               # 54 nodes, 75 undirected edges (150 arcs), scenarios.json, campus_map.png, SHA256SUMS
-├── starter/            # graph.py, student_core.py (AI Core), app.py (Final Streamlit Product)
-├── scripts/            # run_experiments.py, profile_search_logs.py, output/
-└── tests/              # test_project_01_sanity.py, test_stress_scenarios.py, test_app_smoke.py
+├── data/
+├── starter/
+│   ├── app.py
+│   ├── graph.py
+│   └── student_core.py
+├── scripts/
+│   ├── run_experiments.py
+│   ├── profile_search_logs.py
+│   └── output/
+└── tests/
 ```
 
 ## 6. GitHub Repository
 
-- GitHub URL: Not yet created (to be updated once the group publishes its GitHub repository).
+https://github.com/dori1001/66FIT3AIN-TT03_G06_P01
+
+---
+
